@@ -1,12 +1,12 @@
 <template>
   <div class="home">
     <h1>Bienvenido al sitio</h1>
-    <router-link to="/login"><button class="btn-to-login">Iniciar sesión</button></router-link>
+    <hr>
+    <p>Si ves esto es porque ya has iniciado sesión</p>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
 
 export default {
   name: 'Home',
