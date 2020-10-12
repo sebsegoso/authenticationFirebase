@@ -8,13 +8,13 @@ export default new Vuex.Store({
     user: {}
   },
   mutations: {
-    SETUSER(state, user) {
+    SET_USER(state, user) {
       state.user = user
     }
   },
   actions: {
     setUser({ commit }, user) {
-      commit('SETUSER', user)
+      commit('SET_USER', user)
     }
   },
   modules: {

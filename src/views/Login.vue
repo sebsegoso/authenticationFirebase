@@ -35,10 +35,10 @@ export default {
         .signInWithEmailAndPassword(this.email, this.password)
         .then(
           acept => {
-          console.log('Yeah bitch!',acept.user)
+          console.log(`Yeah, sesión iniciada: \n${acept.user.email}`)
+          this.$store.dispatch("setUser" , acept.user.email)
           this.$router.push('/')
         })
-        .then(this.$store.dispatch("setUser"))
         .catch(function (error) {
           // Handle Errors here.
           var errorCode = error.code;
