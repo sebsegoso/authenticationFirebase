@@ -16,8 +16,11 @@ export default {
   methods: {
     logOut() {
       firebase .auth().signOut()
-        .then(() => alert("Sesión cerrada"))
-        .then(()=> location.reload())
+        .then(() => {
+          alert("Sesión cerrada")
+          this.$router.push("Login")
+          })
+        // .then(()=> location.reload())
         // .then(this.$router.push("Login"));
     },
   },
